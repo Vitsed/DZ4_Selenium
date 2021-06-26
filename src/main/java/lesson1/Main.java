@@ -1,17 +1,18 @@
 package lesson1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
+
         System.setProperty("webdriver.chrome.driver", "D:\\Soft\\Selenium\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
@@ -48,14 +49,13 @@ public class Main {
         List<WebElement> webElementList = driver.findElements(By.xpath("//div[@class='search_results search_results_last']/div[@class='element']"));
 
         for (int i = 0; i < webElementList.size(); i++) {
-//            System.out.println(webElementList.get(i));
             System.out.println("Фильм : " +
                     webElementList.get(i).findElement(By.xpath(".//div[@class='info']/p")).getText()
             );
             try {
 
                 System.out.println(". Имеет рейтинг " + webElementList.get(i).findElement(By.xpath(".//div[@class='rating  ratingGreenBG']")).getText());
-            } catch (Exception e) {
+            } catch (NoSuchElementException e) {
                 System.out.println(". Не имеет рейтинг ");
             }
         }
