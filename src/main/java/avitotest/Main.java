@@ -12,8 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    private static final String LONG_NAME_LOC =  ".button-button-2Fo5k.button-size-s-3-rn6.button-primary-1RhOG.width-width-12-2VZLz";
-
     private static final String CHOOSE_CATEGORY_LOC =  "category";
     private static final String SEARCH_FIELD_LOC =  "input[data-marker=\"search-form/suggest\"]";
     private static final String SELECT_CITY_LOC =  ".main-select-2pf7p.main-location-3j9by";
