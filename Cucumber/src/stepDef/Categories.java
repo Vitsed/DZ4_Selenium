@@ -1,19 +1,22 @@
 package stepDef;
 
 public enum Categories {
-    оргтехника("Электроника"),
-    автомобили("Транспорт"),
-    квартиры("Недвижимсоть"),
-    вакансии("Работа"),
-    животные("Питомцы");
+    оргтехника(1, "Электроника"),
+    автомобили(2, "Транспорт"),
+    квартиры(3, "Недвижимсоть"),
+    вакансии(4, "Работа"),
+    животные(5, "Питомцы");
 
-    public String value;
+    private int id;
+    private String text;
 
-    Categories(String value) {
-        this.value = value;
+
+    Categories(int id, String text) {
+        this.id = id;
+        this.text = text;
     }
 
-    public String getValue() {
-        return value;
+    public String getText() {
+        return text;
     }
 }
