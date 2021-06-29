@@ -19,7 +19,7 @@ public class Main {
     private static final String USE_FIRST_CITY_LOC =  "li[data-marker='suggest(0)']";
     private static final String PRESS_SHOW_BUTTON_LOC = "[data-marker='popup-location/save-button']";
     private static final String CHECKBOX_LOC =  "[data-marker='delivery-filter/text']";
-    private static final String SORTING_LOC =  ".sort-select-3QxXG.select-select-box-3LBfK.select-size-s-2gvAy>select";
+    private static final String ORDER_BY_LOC =  ".sort-select-3QxXG.select-select-box-3LBfK.select-size-s-2gvAy>select";
     private static final String PRESS_SUBMIT_BUTTON_SEARCH_LOC =  "[data-marker='search-filters/submit-button']";
     private static final String SEARCH_LIST_LOC =  ".iva-item-root-G3n7v.photo-slider-slider-3tEix iva-item-list-2_PpT iva-item-redesign-1OBTh items-item-1Hoqq items-listItem-11orH js-catalog-item-enum".replace(" ", ".");
     private static final String SHOW_PRINTER_NAME_LOC = "h3[itemprop]";
@@ -56,7 +56,7 @@ public class Main {
 
         driver.findElement(By.cssSelector(PRESS_SUBMIT_BUTTON_SEARCH_LOC)).click();
 
-        Select sorting = new Select(driver.findElement(By.cssSelector(SORTING_LOC)));
+        Select sorting = new Select(driver.findElement(By.cssSelector(ORDER_BY_LOC)));
 
         sorting.selectByVisibleText("Дороже");
 
