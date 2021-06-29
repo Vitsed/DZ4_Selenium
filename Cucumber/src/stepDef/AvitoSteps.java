@@ -1,5 +1,6 @@
 package stepDef;
 
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Пусть;
 import io.cucumber.java.ru.Тогда;
@@ -16,41 +17,50 @@ public class AvitoSteps {
 
     }
 
-    @И("в выпадающем списке категорий выбрана {word}")
-    public static void getEquipment(String equipment) {
-        System.out.println();
+    @ParameterType(".*")
+    public Categories category(String category) {
+        return Categories.valueOf(category);
+    }
+    @И("в выпадающем списке категорий выбрана {category}")
+    public static void getEquipment(String category) {
+        System.out.println("Выбрана категория: " + category);
     }
 
     @И("в поле поиска введено значение {word}")
     public static void getPrinter(String printer) {
-        System.out.println();
+        System.out.println("Введено значение " + printer);
     }
 
     @Тогда("кликнуть по выпадающему списку региона")
     public static void getClick() {
-        System.out.println();
+        System.out.println("Щелчок мышью по выпадающему списку");
     }
 
     @Тогда("в поле регион введено значение {word}")
     public static void getCityName(String name) {
-        System.out.println();
+        System.out.println("Введено значение " + name + " в поле регион");
     }
 
     @И("нажата кнопка показать объявления")
     public static void getMessage() {
-        System.out.println();
+        System.out.println("Нажали кнопку показать объявления");
     }
 
     @Тогда("открылась страница результаты по запросу {word}")
-    public static void getPage(String printer) {
-        System.out.println();
+    public static void getPage(String query) {
+        System.out.println("Открылась страница по запросу: " + query);
     }
 
     @И("активирован чекбокс только с фотографией")
     public static void getCheckbox() {
-        System.out.println();
+        System.out.println("Поставлена галочка в чекбокс");
     }
-    @И("в выпадающем списке сортировка выбрано значение {word}")
+
+    @ParameterType(".*")
+    public Sorting sorting(String sortBy) {
+        return Sorting.valueOf(sortBy);
+    }
+    @И("в выпадающем списке сортировка выбрано значение {sorting}")
     public static void getList() {
         System.out.println();
     }
