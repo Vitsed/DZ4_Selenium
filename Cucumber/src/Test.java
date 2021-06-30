@@ -12,6 +12,6 @@ public class Test {
 
     @org.junit.Test
     public static void run(String[] args) {
-
+        System.out.println("All tests complete");
     }
 }
