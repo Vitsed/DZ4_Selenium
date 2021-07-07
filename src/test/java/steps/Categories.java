@@ -1,4 +1,4 @@
-package stepDef;
+package steps;
 
 public enum Categories {
     оргтехника(1, "Электроника"),

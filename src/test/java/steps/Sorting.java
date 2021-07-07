@@ -1,4 +1,4 @@
-package stepDef;
+package steps;
 
 public enum Sorting {
     Дороже(1, "Сначала дороже"),

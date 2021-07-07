@@ -1,4 +1,4 @@
-package stepDef;
+package steps;
 
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.ru.И;
