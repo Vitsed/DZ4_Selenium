@@ -1,4 +1,4 @@
-package avitotest;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    private static final String CHOOSE_CATEGORY_LOC =  "category";
+    public static final String CHOOSE_CATEGORY_LOC =  "category";
     private static final String SEARCH_FIELD_LOC =  "input[data-marker=\"search-form/suggest\"]";
     private static final String SELECT_CITY_LOC =  ".main-select-2pf7p.main-location-3j9by";
     private static final String ENTER_CITY_NAME_LOC =  "[data-marker='popup-location/region/input']";

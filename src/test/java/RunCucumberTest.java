@@ -3,15 +3,10 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        features = "Cucumber/features",
+@CucumberOptions(plugin = {"pretty"},
+        features = "src/test/resources/features",
         glue = "steps",
         tags = "@1"
 )
-public class Test {
-
-    @org.junit.Test
-    public static void run(String[] args) {
-
-    }
+public class RunCucumberTest {
 }

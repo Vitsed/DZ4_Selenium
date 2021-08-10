@@ -1,9 +1,11 @@
 package steps;
 
+import pages.Main;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Пусть;
 import io.cucumber.java.ru.Тогда;
+import org.junit.Assert;
 
 import java.util.HashMap;
 
@@ -13,6 +15,7 @@ public class AvitoSteps {
 
     @Пусть("открыт ресурс авито")
     public static void getAvito() {
+        Assert.assertEquals("category", Main.CHOOSE_CATEGORY_LOC);
         System.out.println("Авито открыто");
     }
 
