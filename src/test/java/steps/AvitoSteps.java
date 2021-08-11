@@ -1,7 +1,6 @@
 package steps;
 
 
-import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Пусть;
@@ -37,17 +36,13 @@ public class AvitoSteps {
 
     public static WebDriver driver;
 
-    @Before
-    public static void setProperty() {
+    @Пусть("открыт ресурс авито")
+    public static void getAvito() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-    }
-
-    @Пусть("открыт ресурс авито")
-    public static void getAvito() {
         driver.get("https://www.avito.ru/");
     }
 
@@ -57,25 +52,29 @@ public class AvitoSteps {
     }
     @И("в выпадающем списке категорий выбрана {category}")
     public static void getEquipment(Categories category) {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Select cat = new Select(driver.findElement(By.id(CHOOSE_CATEGORY_LOC)));
         cat.selectByVisibleText(category.getText());
-        System.out.println("Выбрана категория: " + category);
+        System.out.println("Выбрана категория: " + category.getText());
     }
 
     @И("в поле поиска введено значение {word}")
     public static void getPrinter(String printer) {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(SEARCH_FIELD_LOC)).sendKeys(printer);
         System.out.println("Введено значение \"" + printer + "\" в поле поиска");
     }
 
     @Тогда("кликнуть по выпадающему списку региона")
     public static void getClick() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(SELECT_CITY_LOC)).click();
         System.out.println("Выполнен щелчок мышью по выпадающему списку");
     }
 
     @Тогда("в поле регион введено значение {word}")
     public static void getCityName(String city) {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector((ENTER_CITY_NAME_LOC))).sendKeys(city);
         driver.findElement(By.cssSelector(USE_FIRST_CITY_LOC)).click();
         System.out.println("Введено значение \"" + city + "\" в поле регион");
@@ -83,6 +82,7 @@ public class AvitoSteps {
 
     @И("нажата кнопка показать объявления")
     public static void getMessage() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(PRESS_SHOW_BUTTON_LOC)).click();
         System.out.println("Нажали кнопку показать объявления");
     }
@@ -94,6 +94,7 @@ public class AvitoSteps {
 
     @И("активирован чекбокс только с фотографией")
     public static void getCheckbox() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         WebElement checkbox = driver.findElement(By.cssSelector(CHECKBOX_LOC));
 
         if (!checkbox.isSelected()) {
@@ -108,8 +109,9 @@ public class AvitoSteps {
     }
     @И("в выпадающем списке сортировка выбрано значение {sorting}")
     public static void getSortingType(Sorting sortType) {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(PRESS_SUBMIT_BUTTON_SEARCH_LOC)).click();
-
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Select sorting = new Select(driver.findElement(By.cssSelector(ORDER_BY_LOC)));
 
         sorting.selectByVisibleText(sortType.getText());
