@@ -1,2 +1,6 @@
+pages\html_elements\Button.class
 lesson1\Main.class
-avitotest\Main.class
+pages\avito\MainPage.class
+pages\Main.class
+pages\html_elements\Input.class
+drivers\ChromeDriver.class
