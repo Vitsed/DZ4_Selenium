@@ -44,7 +44,7 @@ public class Main {
         if (!checkbox.isSelected()) {
             checkbox.click();
         }
-        driver.findElement(By.cssSelector(".el_18 submit nice_button".replace(" ", "."))).click();
+        driver.findElement(By.cssSelector(".el_18.submit.nice_button")).click();
 
         List<WebElement> webElementList = driver.findElements(By.xpath("//div[@class='search_results search_results_last']/div[@class='element']"));
 

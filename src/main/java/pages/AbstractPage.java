@@ -2,11 +2,12 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public abstract class AbstractPage {
+public abstract class AbstractPage implements AutoCloseable{
 
     private final WebDriver driver;
 
     public AbstractPage(WebDriver driver) {
+
         this.driver = driver;
     }
 
@@ -18,4 +19,8 @@ public abstract class AbstractPage {
 
     public abstract boolean atPage();
 
+    @Override
+    public void close() throws Exception {
+        driver.close();
+    }
 }
