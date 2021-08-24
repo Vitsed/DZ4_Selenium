@@ -37,6 +37,11 @@ public class KinopoiskTest {
         searchMoviePage.pressSubmitButton();
         searchMoviePage.showRating();
 
+        try {
+            searchMoviePage.close();
+        } catch (Exception e) {
+            System.out.println("Can't close the window!!!");
+        }
     }
 
 }
