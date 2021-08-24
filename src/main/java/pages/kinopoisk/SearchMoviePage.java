@@ -103,12 +103,6 @@ public class SearchMoviePage extends AbstractPage {
                 }
             }
 
-            try {
-                super.close();
-            } catch (Exception e) {
-                System.out.println("Can't close the window!!!");
-            }
-
             return true;
         } catch (NoSuchElementException e) {
             return false;
