@@ -1,6 +1,10 @@
 D:\MyProgramms\DZ4_Selenium\src\main\java\pages\html_elements\Input.java
 D:\MyProgramms\DZ4_Selenium\src\main\java\lesson1\Main.java
 D:\MyProgramms\DZ4_Selenium\src\main\java\pages\html_elements\Button.java
+D:\MyProgramms\DZ4_Selenium\src\main\java\pages\kinopoisk\KinopoiskMainPage.java
 D:\MyProgramms\DZ4_Selenium\src\main\java\pages\Main.java
+D:\MyProgramms\DZ4_Selenium\src\main\java\html_elements\SearchMovieButton.java
 D:\MyProgramms\DZ4_Selenium\src\main\java\drivers\ChromeDriver.java
 D:\MyProgramms\DZ4_Selenium\src\main\java\pages\avito\MainPage.java
+D:\MyProgramms\DZ4_Selenium\src\main\java\pages\kinopoisk\SearchMoviePage.java
+D:\MyProgramms\DZ4_Selenium\src\main\java\pages\AbstractPage.java

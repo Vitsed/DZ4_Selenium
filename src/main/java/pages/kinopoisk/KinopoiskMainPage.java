@@ -7,8 +7,8 @@ import pages.AbstractPage;
 
 public class KinopoiskMainPage extends AbstractPage {
 
-    private By link = By.cssSelector("._2-oC2TAEVytFdm6Kvbc7Hu");
 
+    private By link = By.cssSelector("._2-oC2TAEVytFdm6Kvbc7Hu");
 
     public KinopoiskMainPage(WebDriver driver) {
         super(driver);

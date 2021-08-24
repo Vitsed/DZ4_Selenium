@@ -89,7 +89,6 @@ public class SearchMoviePage extends AbstractPage {
 
     public boolean showRating() {
         try {
-
             List<WebElement> webElementList = super.getDriver().findElements(webList);
 
             for (WebElement webElement : webElementList) {

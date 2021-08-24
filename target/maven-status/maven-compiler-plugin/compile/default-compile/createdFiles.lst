@@ -1,6 +1,10 @@
 pages\html_elements\Button.class
+pages\kinopoisk\KinopoiskMainPage.class
 lesson1\Main.class
+html_elements\SearchMovieButton.class
 pages\avito\MainPage.class
+pages\kinopoisk\SearchMoviePage.class
+pages\AbstractPage.class
 pages\Main.class
 pages\html_elements\Input.class
 drivers\ChromeDriver.class

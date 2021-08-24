@@ -15,9 +15,10 @@ public class KinopoiskTest {
 
     @Before
     public void settings() {
-        System.setProperty("webdriver.chrome.driver", "D:\\Soft\\Selenium\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         mainPage =
                 new KinopoiskMainPage(new ChromeDriver());
+        mainPage.getDriver().manage().window().maximize();
     }
 
 
@@ -35,6 +36,7 @@ public class KinopoiskTest {
         searchMoviePage.useCheckbox();
         searchMoviePage.pressSubmitButton();
         searchMoviePage.showRating();
+
     }
 
 }
